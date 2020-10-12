@@ -5,7 +5,7 @@ services:
     image: nginx:1.15-alpine
     restart: unless-stopped
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx.cnf:/etc/nginx/conf.d
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
     ports:
